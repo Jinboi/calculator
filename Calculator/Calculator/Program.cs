@@ -1,4 +1,5 @@
 ﻿using CalculatorLibrary;
+using System.Diagnostics.Metrics;
 
 namespace CalculatorProgram
 {
@@ -12,6 +13,8 @@ namespace CalculatorProgram
             Console.WriteLine("------------------------\n");
 
             Calculator calculator = new Calculator();
+
+            int counter = 0;
 
             while (!endApp)
             {
@@ -55,18 +58,26 @@ namespace CalculatorProgram
                 try
                 {
                     result = calculator.DoOperation(cleanNum1, cleanNum2, op);
+
+                    //Display how many times the calculator was used    
+                    counter++;
+                    Console.WriteLine($"The calculator was used {counter} times");
+
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
                     }
-                    else Console.WriteLine("Your result: {0:0.##}\n", result);
+                    else
+                    {
+                        Console.WriteLine("Your result: {0:0.##}\n", result);
+                    }
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
                 }
 
-                Console.WriteLine("------------------------\n");
+                Console.WriteLine("------------------------\n");               
 
                 // Wait for the user to respond before closing.
                 Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
