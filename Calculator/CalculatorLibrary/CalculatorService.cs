@@ -2,13 +2,13 @@
 
 namespace CalculatorLibrary
 {
-    public class Calculator
+    public class CalculatorService
     {
         JsonWriter writer;
         private List<string> calculations; // List to store the history of calculations
         private List<double> results; // List to store the results of calculations
 
-        public Calculator()
+        public CalculatorService()
         {
             StreamWriter logFile = File.CreateText("calculatorlog.json");
             logFile.AutoFlush = true;

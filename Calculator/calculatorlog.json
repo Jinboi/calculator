@@ -7,6 +7,26 @@
       "Result": 3.0
     },
     {
+      "Operand1": 3.0,
+      "Operand2": 2.0,
+      "Operation": "Subtract",
+      "Result": 1.0
+    },
+    {
       "Operand1": 1.0,
-      "Operand2": 0.0,
-      "Operation":
+      "Operand2": 2.0,
+      "Operation": "Add",
+      "Result": 3.0
+    },
+    {
+      "Operand1": 3.0,
+      "Operand2": 2.0,
+      "Operation": "Add",
+      "Result": 5.0
+    },
+    {
+      "Operand1": 31.0,
+      "Operand2": 12.0,
+      "Operation": "Add",
+      "Result": 43.0
+    }

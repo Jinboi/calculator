@@ -4,7 +4,22 @@ namespace CalculatorProgram
 {
     public class UserInterface
     {
-        public double GetFirstNumber(Calculator calculator)
+        private CalculatorController _calculatorController;
+
+        public UserInterface(CalculatorController calculatorController)
+        {
+            _calculatorController = calculatorController;
+        }
+        public void StartApp()
+        {
+            bool endApp = false;
+
+            while (!endApp)
+            {
+                endApp = _calculatorController.Run(this); // Delegate running to the controller
+            }
+        }
+        public double GetFirstNumber(CalculatorService calculator)
         {
             Console.WriteLine("Do you want to use a previous result for the first number? (y/n)");
             if (Console.ReadLine() == "y")
@@ -94,13 +109,13 @@ namespace CalculatorProgram
         public bool AskToClear()
         {
             Console.Write("Press 'c' and Enter to clear the list, or press any other key and Enter to continue: ");
-            return Console.ReadLine() == "c";
+            return Console.ReadLine() == "c";//Returns True if "c" or Returns False if anything else
         }
 
         public bool AskToEndApp()
         {
             Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-            return Console.ReadLine() == "n";
+            return Console.ReadLine() == "n"; //Returns True if "n" or Returns False if anything else
         }
 
         private double GetNumberInput(string prompt)

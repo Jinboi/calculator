@@ -2,25 +2,24 @@
 
 namespace CalculatorProgram
 {
-    public class CalculatorEngine
+    public class CalculatorController
     {
-        private Calculator _calculator;
-        private int _counter;
+        private CalculatorService _calculatorService;
+        private int _counter = 0;
 
-        public CalculatorEngine(Calculator calculator)
+        public CalculatorController(CalculatorService calculatorService)
         {
-            _calculator = calculator;
-            _counter = 0;
+            _calculatorService = calculatorService;  // Assignment in constructor
         }
         public bool Run(UserInterface ui)
         {
-            double cleanNum1 = ui.GetFirstNumber(_calculator);
+            double cleanNum1 = ui.GetFirstNumber(_calculatorService);
             string operation = ui.GetOperation();
             double cleanNum2 = ui.GetSecondNumber(operation);
 
             try
             {
-                double result = _calculator.DoOperation(cleanNum1, cleanNum2, operation);
+                double result = _calculatorService.DoOperation(cleanNum1, cleanNum2, operation);
                 _counter++;
                 ui.DisplayResult(result, _counter);
             }
@@ -29,11 +28,11 @@ namespace CalculatorProgram
                 ui.DisplayError(e.Message);
             }
 
-            ui.DisplayCalculations(_calculator.GetCalculations());
+            ui.DisplayCalculations(_calculatorService.GetCalculations());
 
             if (ui.AskToClear())
             {
-                _calculator.ClearCalculations();
+                _calculatorService.ClearCalculations();
             }
 
             return ui.AskToEndApp();

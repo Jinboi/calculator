@@ -9,16 +9,13 @@ namespace CalculatorProgram
             Console.WriteLine("Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
 
-            Calculator calculator = new Calculator();
-            CalculatorEngine engine = new CalculatorEngine(calculator);
-            UserInterface ui = new UserInterface();
+            CalculatorService calculatorService = new CalculatorService();
+            CalculatorController calculatorController = new CalculatorController(calculatorService);
+            UserInterface ui = new UserInterface(calculatorController);
 
-            bool isRunning = true;
-            
-            do
-            {
-                engine.Run(ui);
-            } while (isRunning);
+            ui.StartApp();
+
+            Console.WriteLine("Goodbye");
         }
     }
 }
