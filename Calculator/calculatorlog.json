@@ -2,22 +2,25 @@
   "Operations": [
     {
       "Operand1": 12.0,
-      "Operand2": 12.0,
-      "Operation": "Add",
-      "Result": 24.0
+      "Operand2": 3.0,
+      "Operation": "Subtract",
+      "Result": 9.0
     },
     {
-      "Operand1": 12.0,
-      "Operand2": 12.0,
-      "Operation": "Add",
-      "Result": 24.0
+      "Operand1": 1.0,
+      "Operand2": 0.0,
+      "Operation": "Sine",
+      "Result": 0.8414709848078965
     },
     {
-      "Operand1": 12.0,
-      "Operand2": 12.0,
-      "Operation": {
-        "Operand1": 12.0,
-        "Operand2": 12.0,
-        "Operation": "Add",
-        "Result": 24.0
-      }
+      "Operand1": 0.8414709848078965,
+      "Operand2": 9.0,
+      "Operation": "Subtract",
+      "Result": -8.158529015192103
+    },
+    {
+      "Operand1": 1.0,
+      "Operand2": 1.0,
+      "Operation": "Add",
+      "Result": 2.0
+    }
