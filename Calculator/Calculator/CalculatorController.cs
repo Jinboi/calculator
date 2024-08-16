@@ -4,13 +4,20 @@ namespace CalculatorProgram
 {
     public class CalculatorController
     {
+        #region Fields
+
         private CalculatorService _calculatorService;
         private int _counter = 0;
 
+        #endregion
+        #region Constructors
         public CalculatorController(CalculatorService calculatorService)
         {
             _calculatorService = calculatorService;  // Assignment in constructor
         }
+
+        #endregion
+        #region Methods: Public
         public bool Run(UserInterface ui)
         {
             double cleanNum1 = ui.GetFirstNumber(_calculatorService);
@@ -30,12 +37,14 @@ namespace CalculatorProgram
 
             ui.DisplayCalculations(_calculatorService.GetCalculations());
 
-            if (ui.AskToClear())
+            if (ui.AskIfUserWantsToClearList())
             {
                 _calculatorService.ClearCalculations();
             }
 
-            return ui.AskToEndApp();
+            return ui.AskIfUserWantsToCloseApp();
         }
+
+        #endregion
     }
 }

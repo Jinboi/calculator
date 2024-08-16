@@ -4,6 +4,7 @@ namespace CalculatorProgram
 {
     class Program
     {
+        #region Methods: Static
         static void Main(string[] args)
         {
             Console.WriteLine("Console Calculator in C#\r");
@@ -13,9 +14,17 @@ namespace CalculatorProgram
             CalculatorController calculatorController = new CalculatorController(calculatorService);
             UserInterface ui = new UserInterface(calculatorController);
 
-            ui.StartApp();
+            // Start the app
+            bool endApp = false;
+
+            while (!endApp)
+            {
+                endApp = calculatorController.Run(ui);
+            }
 
             Console.WriteLine("Goodbye");
         }
+
+        #endregion
     }
 }

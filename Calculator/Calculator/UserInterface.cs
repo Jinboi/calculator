@@ -4,21 +4,17 @@ namespace CalculatorProgram
 {
     public class UserInterface
     {
+        #region Fields
         private CalculatorController _calculatorController;
-
+        #endregion
+        #region Constructors
         public UserInterface(CalculatorController calculatorController)
         {
             _calculatorController = calculatorController;
         }
-        public void StartApp()
-        {
-            bool endApp = false;
 
-            while (!endApp)
-            {
-                endApp = _calculatorController.Run(this); // Delegate running to the controller
-            }
-        }
+        #endregion
+        #region Methods: public
         public double GetFirstNumber(CalculatorService calculator)
         {
             Console.WriteLine("Do you want to use a previous result for the first number? (y/n)");
@@ -52,7 +48,6 @@ namespace CalculatorProgram
                 return GetNumberInput("Type a number, and then press Enter: ");
             }
         }
-
         public string GetOperation()
         {
             Console.WriteLine("Choose an operator from the following list:");
@@ -69,7 +64,6 @@ namespace CalculatorProgram
             Console.Write("Your option? ");
             return Console.ReadLine();
         }
-
         public double GetSecondNumber(string operation)
         {
             if (operation == "a" || operation == "s" || operation == "m" || operation == "d" || operation == "p")
@@ -78,7 +72,6 @@ namespace CalculatorProgram
             }
             return 0; // Unary operations don't need a second number
         }
-
         public void DisplayResult(double result, int counter)
         {
             Console.WriteLine($"The calculator was used {counter} times");
@@ -91,12 +84,10 @@ namespace CalculatorProgram
                 Console.WriteLine("Your result: {0:0.##}\n", result);
             }
         }
-
         public void DisplayError(string message)
         {
             Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + message);
         }
-
         public void DisplayCalculations(IEnumerable<string> calculations)
         {
             Console.WriteLine("Recent Calculations:");
@@ -105,19 +96,19 @@ namespace CalculatorProgram
                 Console.WriteLine(calc);
             }
         }
-
-        public bool AskToClear()
+        public bool AskIfUserWantsToClearList()
         {
             Console.Write("Press 'c' and Enter to clear the list, or press any other key and Enter to continue: ");
             return Console.ReadLine() == "c";//Returns True if "c" or Returns False if anything else
         }
-
-        public bool AskToEndApp()
+        public bool AskIfUserWantsToCloseApp()
         {
             Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
             return Console.ReadLine() == "n"; //Returns True if "n" or Returns False if anything else
         }
 
+        #endregion        
+        #region Methods: private
         private double GetNumberInput(string prompt)
         {
             Console.Write(prompt);
@@ -129,5 +120,7 @@ namespace CalculatorProgram
             }
             return number;
         }
+
+        #endregion
     }
 }

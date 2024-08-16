@@ -4,10 +4,14 @@ namespace CalculatorLibrary
 {
     public class CalculatorService
     {
+        #region Fields
+
         JsonWriter writer;
         private List<string> calculations; // List to store the history of calculations
         private List<double> results; // List to store the results of calculations
 
+        #endregion
+        #region Constructors
         public CalculatorService()
         {
             StreamWriter logFile = File.CreateText("calculatorlog.json");
@@ -21,6 +25,9 @@ namespace CalculatorLibrary
             calculations = new List<string>(); // Initialize the history list
             results = new List<double>(); // Initialize the results list
         }
+
+        #endregion
+        #region Methods: Public
 
         public double DoOperation(double num1, double num2, string op)
         {
@@ -95,25 +102,6 @@ namespace CalculatorLibrary
             return result;
         }
 
-        private string GetOperationSymbol(string op)
-        {
-            // Return the symbol corresponding to the operation code
-            return op switch
-            {
-                "a" => "+",
-                "s" => "-",
-                "m" => "*",
-                "d" => "/",
-                "p" => "^",
-                "r" => "√",
-                "e" => "10^",
-                "sin" => "sin",
-                "cos" => "cos",
-                "tan" => "tan",
-                _ => "?",
-            };
-        }
-
         public List<string> GetCalculations()
         {
             return calculations;
@@ -136,6 +124,31 @@ namespace CalculatorLibrary
             writer.WriteEndObject();
             writer.Close();
         }
+
+        #endregion
+        #region Methods: Private
+
+        private string GetOperationSymbol(string op)
+        {
+            // Return the symbol corresponding to the operation code
+            return op switch
+            {
+                "a" => "+",
+                "s" => "-",
+                "m" => "*",
+                "d" => "/",
+                "p" => "^",
+                "r" => "√",
+                "e" => "10^",
+                "sin" => "sin",
+                "cos" => "cos",
+                "tan" => "tan",
+                _ => "?",
+            };
+        }
+
+
+        #endregion
     }
 
 }
