@@ -4,13 +4,10 @@ namespace CalculatorLibrary
 {
     public class CalculatorService
     {
-        #region Fields
-
         JsonWriter writer;
         private List<string> calculations; // List to store the history of calculations
         private List<double> results; // List to store the results of calculations
 
-        #endregion
         #region Constructors
         public CalculatorService()
         {
@@ -116,18 +113,10 @@ namespace CalculatorLibrary
         {
             calculations.Clear(); // Clear the list
             results.Clear(); // Clear the results list
-        }
-
-        public void Finish()
-        {
-            writer.WriteEndArray();
-            writer.WriteEndObject();
-            writer.Close();
-        }
+        }        
 
         #endregion
         #region Methods: Private
-
         private string GetOperationSymbol(string op)
         {
             // Return the symbol corresponding to the operation code
@@ -147,8 +136,6 @@ namespace CalculatorLibrary
             };
         }
 
-
         #endregion
     }
-
 }

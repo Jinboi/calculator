@@ -1,30 +1,27 @@
 ﻿using CalculatorLibrary;
 
-namespace CalculatorProgram
+namespace CalculatorProgram;
+class Program
 {
-    class Program
+    #region Methods: Static
+    static void Main(string[] args)
     {
-        #region Methods: Static
-        static void Main(string[] args)
+        Console.WriteLine("Console Calculator in C#\r");
+        Console.WriteLine("------------------------\n");
+
+        // Create an instance of CalculatorService and UserInterface
+        var calculatorService = new CalculatorService();
+        var userInterface = new UserInterface(calculatorService);
+
+        bool endApp = false;
+
+        while (!endApp)
         {
-            Console.WriteLine("Console Calculator in C#\r");
-            Console.WriteLine("------------------------\n");
-
-            CalculatorService calculatorService = new CalculatorService();
-            CalculatorController calculatorController = new CalculatorController(calculatorService);
-            UserInterface ui = new UserInterface(calculatorController);
-
-            // Start the app
-            bool endApp = false;
-
-            while (!endApp)
-            {
-                endApp = calculatorController.Run(ui);
-            }
-
-            Console.WriteLine("Goodbye");
+            endApp = userInterface.Run();
         }
 
-        #endregion
+        Console.WriteLine("Goodbye");
     }
+
+    #endregion
 }
