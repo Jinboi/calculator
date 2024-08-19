@@ -1,4 +1,10 @@
-﻿using CalculatorLibrary;
+﻿// -------------------------------------------------------------------------------------------------
+// Calculator.Program
+// -------------------------------------------------------------------------------------------------
+// Insertion point for the calculator application.
+// -------------------------------------------------------------------------------------------------
+
+using CalculatorLibrary;
 
 namespace CalculatorProgram;
 class Program
@@ -9,15 +15,15 @@ class Program
         Console.WriteLine("Console Calculator in C#\r");
         Console.WriteLine("------------------------\n");
 
-        // Create an instance of CalculatorService and UserInterface
+        // Create an instance of CalculatorService and CalculatorEngine
         var calculatorService = new CalculatorService();
-        var userInterface = new UserInterface(calculatorService);
+        var calculatorEngine = new CalculatorEngine(calculatorService);
 
         bool endApp = false;
 
         while (!endApp)
         {
-            endApp = userInterface.Run();
+            endApp = calculatorEngine.Run();
         }
 
         Console.WriteLine("Goodbye");

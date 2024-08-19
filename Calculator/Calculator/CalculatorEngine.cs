@@ -1,7 +1,13 @@
-﻿using CalculatorLibrary;
+﻿// -------------------------------------------------------------------------------------------------
+// Calculator.CalculatorEngine
+// -------------------------------------------------------------------------------------------------
+// Program engine that interacts with user and calls InputHandler, OutputHandler and CalculatorService.
+// -------------------------------------------------------------------------------------------------
+
+using CalculatorLibrary;
 
 namespace CalculatorProgram;
-public class UserInterface
+public class CalculatorEngine
 {
     #region Fields
 
@@ -11,9 +17,8 @@ public class UserInterface
     private readonly OutputHandler _outputHandler;
 
     #endregion
-
     #region Constructors
-    public UserInterface(CalculatorService calculatorService)
+    public CalculatorEngine(CalculatorService calculatorService)
     {
         _calculatorService = calculatorService;
         _inputHandler = new InputHandler();
@@ -21,7 +26,6 @@ public class UserInterface
     }
 
     #endregion
-
     #region Methods: Internal
     internal bool Run()
     {

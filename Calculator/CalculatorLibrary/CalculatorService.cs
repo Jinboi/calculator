@@ -1,4 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿// -------------------------------------------------------------------------------------------------
+// CalculatoLibrary.CalculatorService
+// -------------------------------------------------------------------------------------------------
+// Performs calculations based on the inputs provided by user and return results to CalculatorEngine.
+// -------------------------------------------------------------------------------------------------
+
+using Newtonsoft.Json;
 
 namespace CalculatorLibrary
 {

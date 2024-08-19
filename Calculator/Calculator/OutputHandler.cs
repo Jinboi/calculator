@@ -1,4 +1,10 @@
-﻿namespace CalculatorProgram;
+﻿// -------------------------------------------------------------------------------------------------
+// Calculator.OutputHandler
+// -------------------------------------------------------------------------------------------------
+// Displays results provided by CalculatorEngine to user.
+// -------------------------------------------------------------------------------------------------
+
+namespace CalculatorProgram;
 public class OutputHandler
 {
     public void DisplayResult(double result, int counter)

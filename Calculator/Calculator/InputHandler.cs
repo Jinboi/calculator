@@ -1,4 +1,11 @@
-﻿using CalculatorLibrary;
+﻿// -------------------------------------------------------------------------------------------------
+// Calculator.InputHandler
+// -------------------------------------------------------------------------------------------------
+// Collects input from user and return results to CalculatorEngine.
+// -------------------------------------------------------------------------------------------------
+
+
+using CalculatorLibrary;
 
 namespace CalculatorProgram;
 public class InputHandler
