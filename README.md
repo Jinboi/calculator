@@ -58,7 +58,7 @@ You will then asked to input the first number and you will be given a menu to ch
 - **r**: For Square Roots
 - **e**: For 10x
 - **sin**: For Sine
-- **    cos**: For Cosine
+- **cos**: For Cosine
 - **tan**: For Tangent
 
 Once you choose your option, you will be asked to provide your second number:
