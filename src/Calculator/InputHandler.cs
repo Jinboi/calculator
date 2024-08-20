@@ -4,7 +4,6 @@
 // Collects input from user and return results to CalculatorEngine.
 // -------------------------------------------------------------------------------------------------
 
-
 using CalculatorLibrary;
 
 namespace CalculatorProgram;

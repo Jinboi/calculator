@@ -7,7 +7,7 @@
 
 Welcome to the Calculator App!
 
-This app helps you to solve quick calculations. 
+This app helps you solve quick calculations. 
 
 This is the C# Console Project #2
 
@@ -39,9 +39,15 @@ This is the C# Console Project #2
 
 ### Console Screenshots
 
-This is what your main menu looks like:
+This is the initial screen of the app when you start:
 
-![math game console main menu](./img/mathGameMainMenu.PNG)
+![calculator initial screen](./img/calculatorInitialScreen.PNG)
+
+
+You will then asked to input the first number and you will be given a menu to choose a calculation option:
+
+![calculator main menu screen](./img/calculatorMainMenu.PNG)
+
 
 ## Choose an option:
 - **a**: For Addition
@@ -52,46 +58,40 @@ This is what your main menu looks like:
 - **r**: For Square Roots
 - **e**: For 10x
 - **sin**: For Sine
-- **cos**: For Cosine
+- **    cos**: For Cosine
 - **tan**: For Tangent
 
-Once you choose to play a Math Game, you will be able to choose your game difficulty:
+Once you choose your option, you will be asked to provide your second number:
 
-![math game console game difficulty](./img/mathGameGameDifficulty.PNG)
+![calculator second number screen](./img/calculatorList.PNG)
 
-## Choose an option:
-- **Easy**: numbers between 1-9.
-- **Normal**: numbers between 1-99.
-- **Hard**: numbers between 1-999.
+Then, the calculator application will provide you the answer of the calculation based on your first number, calculation option and your second number:
 
-Then, you can set the number of questions you'd like to solve:
+![calculator second number screen](./img/calculatorList.PNG)
 
-![math game console number of questions](./img/mathGameNumberOfQuestions.PNG)
+Also, you can perform more calculations using your previous answer that's on the list. 
 
-Keep in mind that there is a countdown before your game starts:
+![calculator perform more calculations using previous answers](./img/calculatorMoreList.PNG)
 
-![math game console countdown](./img/mathGameCountDown.PNG)
+Keep in mind that you can press 'c' to clear the list. 
 
-Also, you can see your score at the end of each game:
+![calculator calculation from previous answer](./img/calculatorCToClearList.PNG)
 
-![math game console game score](./img/mathGameScore.PNG)
+Finally, you can see press 'n' to end the calculator application:
 
-Finally, you can see your game history of previous games from View History:
-
-![math game console view history](./img/mathGameViewHistory.PNG)
+![calculator end application](./img/calculatorNToExit.PNG)
 
 ## How It Works
 
-- **Menu Navigation**: Use the provided options to select and configure your game.
-- **Questions** Questions are generated according to your chosen operation and difficulty level.
-- **Timer**: The timer begins when you start answering and stops when you finish.
-- **History Recording**: After completing a game, your score and time are recorded in the history.
+- **Menu Navigation**: Follow the provided instructions to input your numbers and choose calculation option.
+- **Calculation Counter**: You can see how many times the calculator was used. 
+- **Answers List**: Your answers are stored in a list. These answers are not stored in a database so it will be cleared once the application is closed. Or, you could clear the list by inputting 'c'. 
 
 ## Room for Improvements
 
-- Data models and structures could have been designed better. 
-- Too many methods have been used which can be factored out.
-- GameEngine and GameLogic could've been seperated.
+- Spectre.console could've been used for better UI.
+- While there's inputHandler and outputHandler, couldn't you have created models using getter and setters?
+- Implement database so that list doesn't get erased when the application is closed.
 
 ## Contributing
 

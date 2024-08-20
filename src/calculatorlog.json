@@ -1,2 +1,20 @@
 {
   "Operations": [
+    {
+      "Operand1": 13.0,
+      "Operand2": 7.0,
+      "Operation": "Divide",
+      "Result": 1.8571428571428572
+    },
+    {
+      "Operand1": 1.8571428571428572,
+      "Operand2": 2.0,
+      "Operation": "Multiply",
+      "Result": 3.7142857142857144
+    },
+    {
+      "Operand1": 3.7142857142857144,
+      "Operand2": 0.0,
+      "Operation": "10^x",
+      "Result": 5179.474679231213
+    }
