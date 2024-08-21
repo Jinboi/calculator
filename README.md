@@ -9,13 +9,15 @@ Welcome to the Calculator App!
 
 This app helps you solve quick calculations. 
 
+You can perform addition, subtraction, multiplication, and division and much more advanced calculations!
+
 This is the C# Console Project #2
 
 ## Features
 
---**Advanced Calculations**: Solve difficult calculations such as square roots. 
---**Calculation Counter**: You can see how many times you've used the calculator.
---**Calculation Repeater**: You can choose an answer from the list of your latest calculation to do more calculations.
+- **Advanced Calculations**: Solve difficult calculations such as square roots. 
+- **Calculation Counter**: You can see how many times you've used the calculator.
+- **Calculation Repeater**: You can choose an answer from the list of your latest calculation to do more calculations.
 
 
 ## Getting Started
@@ -65,11 +67,11 @@ Once you choose your option, you will be asked to provide your second number:
 
 ![calculator second number screen](./img/calculatorList.PNG)
 
-Then, the calculator application will provide you the answer of the calculation based on your first number, calculation option and your second number:
+Then, the calculator application will provide you the answer of the calculation based on you input you provided such as first number, calculation option and your second number:
 
 ![calculator second number screen](./img/calculatorList.PNG)
 
-Also, you can perform more calculations using your previous answer that's on the list. 
+Also, you can perform more calculations using the previous answer. 
 
 ![calculator perform more calculations using previous answers](./img/calculatorMoreList.PNG)
 
@@ -77,7 +79,7 @@ Keep in mind that you can press 'c' to clear the list.
 
 ![calculator calculation from previous answer](./img/calculatorCToClearList.PNG)
 
-Finally, you can see press 'n' to end the calculator application:
+Finally, you can see press 'n' to end the application:
 
 ![calculator end application](./img/calculatorNToExit.PNG)
 
@@ -90,7 +92,7 @@ Finally, you can see press 'n' to end the calculator application:
 ## Room for Improvements
 
 - Spectre.console could've been used for better UI.
-- While there's inputHandler and outputHandler, couldn't you have created models using getter and setters?
+- While there's the inputHandler and outputHandler, couldn't you have created models using getters and setters?
 - Implement database so that list doesn't get erased when the application is closed.
 
 ## Contributing
