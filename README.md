@@ -67,7 +67,7 @@ Once you choose your option, you will be asked to provide your second number:
 
 ![calculator second number screen](./img/calculatorList.PNG)
 
-Then, the calculator application will provide you the answer of the calculation based on you input you provided such as first number, calculation option and your second number:
+Then, the calculator application will provide you the answer of the calculation based on you input such as first number, calculation option and your second number:
 
 ![calculator second number screen](./img/calculatorList.PNG)
 

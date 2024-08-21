@@ -9,6 +9,7 @@ using CalculatorLibrary;
 namespace CalculatorProgram;
 public class InputHandler
 {
+    #region Methods: Public
     public double GetFirstNumber(CalculatorService calculator)
     {
         Console.WriteLine("Do you want to use a previous result for the first number? (y/n)");
@@ -76,6 +77,9 @@ public class InputHandler
         Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
         return Console.ReadLine() == "n";
     }
+
+    #endregion
+    #region Methods: Private
     private double GetNumberInput(string prompt)
     {
         Console.Write(prompt);
@@ -87,4 +91,6 @@ public class InputHandler
         }
         return number;
     }
+
+    #endregion
 }

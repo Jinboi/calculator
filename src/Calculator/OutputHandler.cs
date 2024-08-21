@@ -7,6 +7,7 @@
 namespace CalculatorProgram;
 public class OutputHandler
 {
+    #region Methods: Public
     public void DisplayResult(double result, int counter)
     {
         Console.WriteLine($"The calculator was used {counter} times");
@@ -31,4 +32,6 @@ public class OutputHandler
             Console.WriteLine(calc);
         }
     }
+
+    #endregion
 }

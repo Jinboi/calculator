@@ -10,10 +10,13 @@ namespace CalculatorLibrary
 {
     public class CalculatorService
     {
+        #region Fields
+
         JsonWriter writer;
-        private List<string> calculations; // List to store the history of calculations
+        private List<string> calculations; // List to store the data of previous calculations
         private List<double> results; // List to store the results of calculations
 
+        #endregion
         #region Constructors
         public CalculatorService()
         {
@@ -31,7 +34,6 @@ namespace CalculatorLibrary
 
         #endregion
         #region Methods: Public
-
         public double DoOperation(double num1, double num2, string op)
         {
             double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
@@ -104,17 +106,14 @@ namespace CalculatorLibrary
 
             return result;
         }
-
         public List<string> GetCalculations()
         {
             return calculations;
         }
-
         public List<double> GetResults()
         {
             return results;
         }
-
         public void ClearCalculations()
         {
             calculations.Clear(); // Clear the list

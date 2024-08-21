@@ -12,9 +12,9 @@ public class CalculatorEngine
     #region Fields
 
     private CalculatorService _calculatorService;
-    private int _counter = 0;
     private readonly InputHandler _inputHandler;
     private readonly OutputHandler _outputHandler;
+    private int _counter = 0;
 
     #endregion
     #region Constructors
